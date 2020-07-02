@@ -20,7 +20,6 @@
   Check it out:
 */
 
-
 const reverseStringArray = (str) => {
   return str.split('').reverse().join('');
 };
@@ -32,7 +31,6 @@ const reverseStringLoop = (str) => {
   }
   return result;
 };
-
 
 const _1_arg = 'abcde';
 const _1_expect = 'edcba';
@@ -54,5 +52,3 @@ const _3_actualArray = reverseStringArray(_3_arg);
 const _3_actualLoop = reverseStringLoop(_3_arg);
 console.assert(_3_actualArray === _3_expect, 'Test 3 Array');
 console.assert(_3_actualLoop === _3_expect, 'Test 3 Loop');
-
-

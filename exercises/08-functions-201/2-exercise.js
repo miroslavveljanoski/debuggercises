@@ -9,13 +9,12 @@
 */
 
 const withAnd = (x, y) => {
-  return _;
+  return Number(!(x && y));
 };
 
 const withOr = (x, y) => {
-  return _;
+  return Number(!x || !y);
 };
-
 
 const _1_arg1 = 0;
 const _1_arg2 = 0;
@@ -33,7 +32,6 @@ const _4_arg1 = 1;
 const _4_arg2 = 1;
 const _4_expect = 0;
 
-
 // testing withAnd
 const _1_actualA = withAnd(_1_arg1, _1_arg2);
 console.assert(_1_actualA === _1_expect, 'Test 1 A');
@@ -46,7 +44,6 @@ console.assert(_3_actualA === _3_expect, 'Test 3 A');
 
 const _4_actualA = withAnd(_4_arg1, _4_arg2);
 console.assert(_4_actualA === _4_expect, 'Test 4 A');
-
 
 // testing withOr
 const _1_actualB = withOr(_1_arg1, _1_arg2);
