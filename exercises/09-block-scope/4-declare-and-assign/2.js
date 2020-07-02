@@ -1,10 +1,10 @@
 'use strict';
 
-_;
+let x = 'hi'; // this is global variable
 console.assert(x === 'hi!', 'Test 1: x');
 {
-  _;
-  _;
+  x = 'bye'; // reassigning global variable
+  const y = 'hi'; // this is block variable
 
   console.assert(x === 'bye!', 'Test 2: x');
   console.assert(y === 'hi!', 'Test 3: y');
